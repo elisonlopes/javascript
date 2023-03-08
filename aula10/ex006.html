@@ -7,7 +7,7 @@
     <title>Eventos DOM</title>
     <style>
         div#area{
-            background: green;
+            background: rgb(54, 4, 189);
             color: white;
             width: 200px;
             height: 200px;
@@ -23,20 +23,20 @@
     </div>
 
     <script>
-          var area = window.document.getElementById("area")
+          var area = window.document.querySelector("div#area")
           area.addEventListener("click", clicar)
           area.addEventListener("mouseenter", entrar)
           area.addEventListener("mouseout", sair)
         function clicar(){
             area.innerText = "Clicou!"
-            area.style.background = "red"
+            area.style.background = "black"
         }
         function entrar(){
             area.innerText = "Entrou!"
         }
         function sair(){
             area.innerText = "Saiu!"
-            area.style.background = "green"
+            area.style.background = "blue"
         }
         
 

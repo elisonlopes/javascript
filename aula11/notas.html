@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Notas</title>
+</head>
+<style>
+    body{
+        background-color: rgb(5, 138, 93);
+        color: white;
+        font-size: 2em;
+    }
+    input{
+        font-size: 0.8em;
+    }
+    h1{
+        color: rgb(172, 241, 9);
+    }
+    h2{
+        color: blue;
+        font-size: 1.3em;
+    }
+    h3{
+        color: red;
+    }
+
+</style>
+<body>
+    <h1>SISTEMA DE NOTAS</h1>
+    Informe a média: <input type="number" name="media" id="media">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="resposta">
+
+    </div>
+    <script>
+        function calcular(){
+            var media = document.querySelector("input#media")
+            var resposta = document.querySelector("div#resposta")
+            var media = Number(media.value)
+            resposta.innerHTML += `<p> Sua média é: ${media}</p>`
+            if(media > 6){
+                resposta.innerHTML += `<p> Situação </p><h2>APROVADO</h2> `
+            }else{
+                resposta.innerHTML += `<p> Situação </p> <h3>REPROVADO </h3>`
+            }    
+        }
+    
+    </script>
+</body>
+</html>

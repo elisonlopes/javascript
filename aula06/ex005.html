@@ -16,7 +16,9 @@
     <h1>Iniciando estudos com DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar <strong>DOM</strong> em Javascript</p>
+    <p> Meu nome é Elison</p>
     <div id="msg">Clique em mim</div>
+
 
     <script>
         var corpo = window.document.body
@@ -25,6 +27,8 @@
         d.style.background = "grey"
         var d = window.document.querySelector("div#msg")
         d.style.color = "yellow"
+        var p3 = window.document.getElementsByTagName("p")[2]
+        window.alert(p3.innerHTML)
 
     </script>
 </body>
